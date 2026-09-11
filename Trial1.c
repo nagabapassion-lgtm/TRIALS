@@ -35,6 +35,7 @@ void penalty(void){
             a =1;
             compareScores(team_A_score,team_B_score) ;           
         }
+        break;
         ++round;
 
     }
