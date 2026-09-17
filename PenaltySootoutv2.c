@@ -24,6 +24,7 @@ int check_early_win(int team_A_score, int team_B_score, int round) {
         }
         return 1;
     }
+    
     return 0;
 }
 
@@ -65,7 +66,7 @@ int main() {
         }
 
         if (decided_early == 0) {
-            done = announce_result(team_A_score, team_B_score);
+            announce_result(team_A_score, team_B_score);
         } else {
             done = 1;
         }
