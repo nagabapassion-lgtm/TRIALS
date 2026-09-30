@@ -46,7 +46,7 @@ Tryagain:
         ++round;
     }
     printf("Team A Score: %d\n", team_A_score);
-    printf("Team A Score: %d\n", team_B_score);
+    printf("Team B Score: %d\n", team_B_score);
     if (a=0){
 
     if (team_A_score> team_B_score)
