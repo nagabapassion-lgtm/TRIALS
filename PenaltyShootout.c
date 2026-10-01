@@ -7,7 +7,8 @@ Tryagain:
 
     int team_A_score = 0;
     int team_B_score = 0;
-    int round = 1 , a, Diff, Difference;
+    int round = 1 , Diff;
+    int a=0;
     char Aresult, Bresult;
 
     //starting the shootout
@@ -47,7 +48,7 @@ Tryagain:
     }
     printf("Team A Score: %d\n", team_A_score);
     printf("Team B Score: %d\n", team_B_score);
-    if (a=0){
+    if (a==0){
 
     if (team_A_score> team_B_score)
     {
@@ -59,7 +60,7 @@ Tryagain:
     else
     {
         printf(" The shootout is a draw!\n");
-         goto Tryagain;
+    goto Tryagain;
     }
 }
     return 0;
