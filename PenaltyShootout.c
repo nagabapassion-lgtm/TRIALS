@@ -14,14 +14,26 @@ Tryagain:
     //starting the shootout
     while (round <6)
     {
-        printf("Record Team A's result in the round %d as a Goal(G) or a miss(M):\n", round);
+        do {printf("Record Team A's result in the round %d as a Goal(G) or a miss(M):\n", round);
         scanf(" %c", &Aresult);
+        if(Aresult != 'G' && Aresult!='M')
+        {
+            printf("Error: you have entered an unacceptable value!\n Please Try Again\n");
+        }
+        }while (Aresult != 'G' && Aresult != 'M');
+        
         if (Aresult == 'G' )
         {
             ++team_A_score;
         }
-        printf("Record Team B's result in the round %d as a Goal(G) or a miss(M):\n", round);
+        
+        do {printf("Record Team B's result in the round %d as a Goal(G) or a miss(M):\n", round);
         scanf(" %c", &Bresult);
+        if(Bresult != 'G' && Bresult!='M')
+        {
+            printf("Error: you have entered an unacceptable value!\n Please Try Again\n");
+        }
+        }while (Bresult != 'G' && Bresult != 'M');
         if (Bresult == 'G' )
         {
             ++team_B_score;

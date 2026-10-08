@@ -4,15 +4,21 @@
 // asks one team for their result and returns their updated score
 int record_result(char team, int round, int score) {
     char result;
-    printf("Record Team %c's result in round %d as a Goal(G) or a miss(M):\n", team, round);
-    scanf(" %c", &result);
+    do 
+        {printf("Record Team %c's result in round %d as a Goal(G) or a miss(M):\n", team, round);
+        scanf(" %c", &result);
+        if(result != 'G' && result!='M')
+        {
+            printf("Error: you have entered an unacceptable value!\n Please Try Again\n");
+        }
+    }while (result != 'G' && result!='M');
     if (result == 'G') {
         score++;
     }
     return score;
 }
 
-// checks if the outcome is already decided, prints the winner if so, and returns 1 if it was decided
+// checks if the outcome is already decided
 int check_early_win(int team_A_score, int team_B_score, int round) {
     int Difference = abs(team_A_score - team_B_score);
 
@@ -28,7 +34,7 @@ int check_early_win(int team_A_score, int team_B_score, int round) {
     return 0;
 }
 
-// prints final scores, then the winner (or draw). Returns 1 if there was a winner, 0 if draw
+// prints final scores, then the winner (or draw). 
 int announce_result(int team_A_score, int team_B_score) {
     printf("Team A Score: %d\n", team_A_score);
     printf("Team B Score: %d\n", team_B_score);
